@@ -8,11 +8,16 @@ int eval() {
     scanf("%s", token);
     if (token[0] == 'f') {
         x = eval();
-        return 2 * x - 1;
+        return 2 * x - 3;
     } else if (token[0] == 'g') {
         x = eval();
         y = eval();
-        return x + 2 * y - 3;
+        return 2 * x + y - 7;
+    } else if (token[0] == 'h') {
+        x = eval();
+        y = eval();
+        z = eval();
+        return 3 * x - 2 * y + z;
     }
     return atoi(token);
 }
