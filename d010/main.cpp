@@ -1,28 +1,20 @@
 #include <bits/stdc++.h>
 #define int long long
-
 using namespace std;
 
-int arr[100005];
-int sorted[100005];
-
 signed main() {
-    int n;
     set<int> s;
-    scanf("%lld", &n);
-    for (int i = 0; i < n; ++i) {
-        scanf("%lld", &arr[i]);
-        s.insert(arr[i]);
+    int num;
+    int temp;
+    scanf("%lld", &num);
+    for (int i = 0; i < num; ++i) {
+        scanf("%lld", &temp);
+        s.insert(temp);
     }
-    int index = 0;
-    for(auto ptr=s.begin();ptr != s.end();ptr++){
-        sorted[index++] = *ptr;
+    cout << s.size() << endl;
+    for (auto it = s.begin(); it != s.end(); it++) {
+        printf("%lld ",*it);
     }
-
-    for (int i = 0; i < n - 1; ++i) {
-        printf("%ld ", lower_bound(sorted,sorted+index,arr[i])-sorted);
-    }
-    printf("%ld\n", lower_bound(sorted,sorted+index,arr[n - 1])-sorted);
-
+    cout << endl;
     return 0;
 }
