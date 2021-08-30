@@ -20,8 +20,7 @@ signed main() {
         scanf("%lld", &v);
         sum += v;
         auto it = s.lower_bound(sum - k);
-        printf("sum - k %lld\n", sum - k);
-        printf("search %lld\n", *it);
+        
         if (it != s.end()) {
             best = max(best, sum - *it);
         }
